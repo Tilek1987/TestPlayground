@@ -90,9 +90,9 @@ class ShopImpl: Shop {
         [String]()
         
         var productListArray = products
-            .filter { $0.value.producer.contains(searchString)}
+            .filter { $0.value.producer.contains(searchString) }
             .map(\.value)
-            .sorted {$0.producer < $1.producer }
+            .sorted { $0.producer < $1.producer }
   
         productListArray = limitTo(number: 10, array: productListArray)
     
